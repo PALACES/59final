@@ -445,7 +445,7 @@ class Lobster { //class: lobster
     x= width/8;
     y = horizon +100;
     dx = random(1, 3);
-    dy = random(1, 3);
+    dy = random(-6, 6);
     r = random(255);
     g = random(255);
     b = random(255);
@@ -461,6 +461,7 @@ class Lobster { //class: lobster
     if ( x<left || x>right ) dx *= -1;
     y += dy;  
     if ( y<top || y>bottom ) dy *=  -1;
+    
   }
 }
 
