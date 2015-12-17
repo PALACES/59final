@@ -56,6 +56,7 @@ void draw() {
   if (key >= 'A' && key <= 'Z') {
     jellyScore(school, school.length);
     boatScore(fleet, fleet.length);
+    lobsterScore(ajr, ajr.length);
   } else {
 
     action();
@@ -115,10 +116,10 @@ void boatScore(Boat[]a, int m) { //scorecards for boats
   }
 }
 void lobsterScore(Lobster[]a, int m) { //scorecards for lobsters
-  float x = width/8-100;
-  float y = height/8+10;
-  float w = width/8-50;
-  float h = height/8-20;
+  float x = width/6+320;
+  float y = height/6-85;
+  float w = width/2-50;
+  float h = height/2-20;
   fill(100);
   rect(x-20, y-30, w, h);
   fill(255);
@@ -126,12 +127,16 @@ void lobsterScore(Lobster[]a, int m) { //scorecards for lobsters
   text("Lobster Scores", x+100, y);
   textSize(10);
   text("Name", x, y+20);
-  text("X", x+175, y+20);
+  text("X", x+90, y+20);
   text("DX", x+275, y+20);
+  text("Y", x+175, y+20);
+  text("DY", x+230, y+20);
   for (int i=0; i<m; i++) {
     text(a[i].name, x, y+40);
-    text(a[i].x, x+175, y+40);
+    text(a[i].x, x+90, y+40);
     text(a[i].dx, x+275, y+40);
+    text(a[i].y, x+175, y+40);
+    text(a[i].dy, x+230, y+40);
     y += 45;
   }
 }
